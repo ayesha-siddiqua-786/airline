@@ -3,54 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Airline Ticket Reservation</title>
+  <title>Airline Management System</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Login Page -->
-  <div id="loginPage">
-    <h2>Login</h2>
-    <form id="loginForm">
-      <input type="email" id="email" placeholder="Email" required>
-      <input type="password" id="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-    <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
-  </div>
+  <header>
+    <h1>Airline Management System</h1>
+    <nav>
+      <ul>
+        <li><a href="#flights">Flights</a></li>
+        <li><a href="#bookings">Bookings</a></li>
+        <li><a href="#reports">Reports</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Sign Up Page -->
-  <div id="signupPage" style="display: none;">
-    <h2>Sign Up</h2>
-    <form id="signupForm">
-      <input type="text" id="fullName" placeholder="Full Name" required>
-      <input type="email" id="signupEmail" placeholder="Email" required>
-      <input type="password" id="signupPassword" placeholder="Password" required>
-      <button type="submit">Sign Up</button>
-    </form>
-    <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
-  </div>
+  <main>
+    <section id="flights">
+      <h2>Flights</h2>
+      <!-- Flight listings go here -->
+    </section>
 
-  <!-- Flight Listings -->
-  <div id="flightListings" style="display: none;">
-    <h2>Flight Listings</h2>
-    <div id="flights"></div>
-  </div>
+    <section id="bookings">
+      <h2>Bookings</h2>
+      <!-- Booking management goes here -->
+    </section>
 
-  <!-- JavaScript -->
-  <script>
-    function showSignup() {
-      document.getElementById('loginPage').style.display = 'none';
-      document.getElementById('signupPage').style.display = 'block';
-    }
+    <section id="reports">
+      <h2>Reports</h2>
+      <!-- Reporting functionality goes here -->
+    </section>
+  </main>
 
-    function showLogin() {
-      document.getElementById('signupPage').style.display = 'none';
-      document.getElementById('loginPage').style.display = 'block';
-    }
-
-    // Dummy flight data (replace with actual data fetched from the server)
-    const flights = [
-      { id: 1, name: 'Flight 1', timing: '10:00 AM', seatsAvailable: 50 },
-      { id: 2, name: 'Flight 2', timing: '12:00 PM', seatsAvailable: 30 },
-      { id: 3, name: 'Flight 3', timing: '3:00 PM', seatsAvailable: 20 },
-    ];
+  <footer>
+    <p>&copy; 2024 Airline Management System</p>
+  </footer>
+</body>
+</html>
